@@ -144,5 +144,6 @@ class GameFragment : Fragment() {
             .setPositiveButton(getString(R.string.play_again)) { _, _ ->
                 restartGame()
             }
+            .show()
     }
 }
