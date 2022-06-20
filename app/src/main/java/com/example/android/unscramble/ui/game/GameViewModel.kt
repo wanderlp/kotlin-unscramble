@@ -55,4 +55,12 @@ class GameViewModel: ViewModel() {
         _score += SCORE_INCREASE
     }
 
+    private fun isUserWordCorrect(playerWord: String): Boolean {
+        if (playerWord.equals(currentWord, true)) {
+            increaseScore()
+            return true
+        }
+        return false
+    }
+
 }
