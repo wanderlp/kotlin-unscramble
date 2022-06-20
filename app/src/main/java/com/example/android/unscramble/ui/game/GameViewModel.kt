@@ -33,7 +33,7 @@ class GameViewModel: ViewModel() {
             tempWord.shuffle()
         }
 
-        if (wordsList.contains(currentWord)) {
+        if (wordsList != null && wordsList.contains(currentWord)) {
             getNextWord()
         } else {
             _currentScrambledWord = String(tempWord)
