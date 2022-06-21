@@ -21,6 +21,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -69,9 +70,9 @@ class GameFragment : Fragment() {
         binding.skip.setOnClickListener { onSkipWord() }
 
         // Observe the currentScrambleWord LiveData
-        viewModel.currentScrambledWord.observe(viewLifecycleOwner, {
+        /*viewModel.currentScrambledWord.observe(viewLifecycleOwner, {
             newWord -> binding.textViewUnscrambledWord.text = newWord
-        })
+        })*/
 
         viewModel.score.observe(viewLifecycleOwner, {
             newScore -> binding.score.text = getString(R.string.score, newScore)
